@@ -8,12 +8,12 @@ int main()
 
     float operando1, operando2, resultado;
     char opcao;
-	bool continuar = true;
+	bool continuar = true, entrada = false;
 
 
     while (continuar)
     {
-        cout << "\tCALCULAR TABUADA" << endl;
+        cout << "\tCALCULAR TABUADA ☺" << endl;
         cout << "O que você prefere?" << endl;
         cout << "1. Gerar a tabuada do 1 ao 10." << endl;
 	    cout << "2. Gerar a tabuada de um número específico." << endl;
@@ -35,32 +35,38 @@ int main()
                 }
                 cout << endl;
             }
+
             break;
 
         case '2':
             system("cls");
+
             cout << "Digite o número para gerar a tabuada:" << endl;
             cout << "Número: ";
             cin >> operando1;
-
+            
             cout << "\tTabuada do " << operando1 << ":" << endl << endl;
             for (operando2 = 0; operando2 <= 10; operando2++) {
                 resultado = operando1 * operando2;
                 cout << operando1 << " x " << operando2 << " = " << resultado << endl;
             }
+            
             break;
 
         case '3':
             system("cls");
             cout << "Saindo do programa." << endl;
             continuar = false;
-			break;
+			
+            break;
 
 
         default:
+			system("cls");
             cout << "Opção inválida. Por favor, escolha 1 ou 2." << endl;
-            break;
+			system("pause");
 
+            break;
         }
 
     }
